@@ -16,7 +16,7 @@ require 'rgl/implicit'
 @output_filename = "includes"
 
 OptionParser.new do |opts|
-	opts.banner = "Usage: generate-include-graph.rb [-Iinclude_path] ..."
+	opts.banner = "Usage: generate-include-graph.rb [-I path] [-o filename] file1 file2..."
 
 	opts.on("-I", "--include PATH", "Add PATH to search paths for includes") do |inc|
 		@include_paths << Pathname.new(inc).realpath
